@@ -9,11 +9,16 @@ int main(void) {
     upper = 100;
     step = 10;
 
-    while (step <= upper)
+    char* ftext = "Farenheit"; 
+    char* ctext = "Celsius";
+
+    printf("%s %15s\n", ctext, ftext);
+
+    while (celsius <= upper)
     {
-        fahr = (step * 9.0/5.0 + 32);
-        printf("%3f", celsius);
-        printf("%6.1f", fahr);
-        step += 10;
+        printf("%7.f", celsius);
+        fahr = (celsius * 9.0/5.0 + 32.0);
+        printf("%16.f\n", fahr);
+        celsius += step;
     }
 }
