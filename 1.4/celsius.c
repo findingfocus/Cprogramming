@@ -1,24 +1,24 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void) 
+{
     int lower, upper, step;
     float celsius, fahr;
+    char* ctext = "Celsius";
+    char* ftext = "Farenheit"; 
 
-    celsius = 0;
     lower = 0;
     upper = 100;
     step = 10;
 
-    char* ftext = "Farenheit"; 
-    char* ctext = "Celsius";
+    celsius = lower;
 
+    printf("-CELSIUS TO FARENHEIT CONVERTER-\n");
     printf("%s %15s\n", ctext, ftext);
 
-    while (celsius <= upper)
-    {
-        printf("%7.f", celsius);
+    while (celsius <= upper) {
         fahr = (celsius * 9.0/5.0 + 32.0);
-        printf("%16.f\n", fahr);
+        printf("%7.f %15.f\n", celsius, fahr);
         celsius += step;
     }
 }
