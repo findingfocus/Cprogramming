@@ -10,7 +10,7 @@ int main()
 
 	state = OUT;
 
-	while ((c = getchar()) != EOF)
+	while ((c = getchar()) != EOF) {
 		//check if first space
 		if (c == ' ' && state == OUT) {
 			state = IN;
@@ -25,4 +25,5 @@ int main()
 			putchar(c);
 		}
 		printf("\n");
+	}
 }
